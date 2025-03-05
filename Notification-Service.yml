@@ -1,0 +1,37 @@
+spring :
+  #Data Base configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/notificationservice?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Prashant@1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# email related configuration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: vermapv749@gmail.com
+    password: susj ahoe ygjk honx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+# kafka configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
