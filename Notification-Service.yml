@@ -23,4 +23,6 @@ spring :
             enable: true
           ssl:
             trust: smtp.gmail.com
+server:
+  port: 9060
 
