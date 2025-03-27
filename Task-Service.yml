@@ -1,5 +1,4 @@
 spring:
-  # Database setup
   datasource:
     url: jdbc:mysql://localhost:3306/taskservice?user=root
     username: root
@@ -12,3 +11,7 @@ spring:
     websocket:
       path: /graphql
       enabled: true
+server:
+  port: 9030
+  servlet:
+    context-path: /tasks
