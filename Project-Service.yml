@@ -24,4 +24,4 @@ spring:
 server:
   port: 9020
   servlet:
-    context-path: /project
+    context-path: /projects
