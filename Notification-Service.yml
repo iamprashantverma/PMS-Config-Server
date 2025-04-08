@@ -25,4 +25,6 @@ spring :
             trust: smtp.gmail.com
 server:
   port: 9060
+  servlet:
+    context-path: /notification
 
