@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://activity-db:3306/activitytracker
+    url: jdbc:mysql://activity-db:3306/activityservice
     username: root
     password: Prashant@1234
   jpa:
