@@ -1,7 +1,7 @@
 spring :
   #Data Base configuration
   datasource:
-    url: jdbc:mysql://localhost:3306/notificationservice?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://notification-db:3306/notificationservice?useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: Prashant@1234
   jpa:

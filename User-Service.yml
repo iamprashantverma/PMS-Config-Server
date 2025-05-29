@@ -1,7 +1,7 @@
 name: "Prashant Verma"
 spring :
   datasource:
-    url: jdbc:mysql://localhost:3306/userservice?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://user-db:3306/userservice?useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: Prashant@1234
   jpa:
@@ -15,7 +15,7 @@ spring :
 
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.LongSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
