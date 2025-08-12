@@ -1,34 +1,33 @@
-# cloudinary:
-#   cloud-name: dacxt4qjt
-#   api-key: 522395392912923
-#   api-secret: 0sRJKH16mAbdGnjyb8CuFVuuqNg
-# eureka:
-#   client:
-#     serviceUrl:
-#       defaultZone: http://discovery-service:8761/eureka/
-#     register-with-eureka: true
-#     fetch-registry: true
+cloudinary:
+  cloud-name: dacxt4qjt
+  api-key: 522395392912923
+  api-secret: 0sRJKH16mAbdGnjyb8CuFVuuqNg
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
     
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: '*'
-#   endpoint:
-#     health:
-#       show-details: always
-# spring:
-#   kafka:
-#     bootstrap-servers: kafka:9093
-#     producer:
-#       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#     consumer:
-#       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-#       properties:
-#         spring.json.trusted.packages: "*" 
-#   # profiles:
-#   #   active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+spring:
+  kafka:
+    bootstrap-servers: kafka:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*" 
+
       
 
