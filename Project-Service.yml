@@ -1,14 +1,15 @@
-  # Database Configuration
-  datasource:
-    url: jdbc:mysql://project-db:3306/projectservice
-    username: root
-    password: Prashant@1234
-  jpa:
-    hibernate:
-      ddl-auto: update   
-    show-sql: true
+# project-service.yml
 
-# Server Configuration
+datasource:
+  url: jdbc:mysql://project-db:3306/projectservice
+  username: root
+  password: Prashant@1234
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+
 server:
   port: 9020
   servlet:
