@@ -15,7 +15,7 @@ spring :
 
 
   kafka:
-    bootstrap-servers: kafka:9093
+    bootstrap-servers: localhost:9010
     producer:
       key-serializer: org.apache.kafka.common.serialization.LongSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
