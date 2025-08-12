@@ -2,13 +2,7 @@ cloudinary:
   cloud-name: dacxt4qjt
   api-key: 522395392912923
   api-secret: 0sRJKH16mAbdGnjyb8CuFVuuqNg
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-service:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-    
+
 management:
   endpoints:
     web:
@@ -17,6 +11,7 @@ management:
   endpoint:
     health:
       show-details: always
+
 spring:
   kafka:
     bootstrap-servers: kafka:9093
@@ -27,8 +22,28 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: "*" 
-  # profiles:
-  #   active: dev
- 
+        spring.json.trusted.packages: "*"
 
+---
+
+spring:
+  profiles: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/   
+    register-with-eureka: true
+    fetch-registry: true
+
+---
+
+spring:
+  profiles: !dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/ 
+    register-with-eureka: true
+    fetch-registry: true
