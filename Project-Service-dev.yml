@@ -1,6 +1,6 @@
   # Database Configuration
   datasource:
-    url: jdbc:mysql://localhost:3306/projectservice
+    url: jdbc:mysql://localhost:3306/projectservice 
     username: root
     password: Prashant@1234
   jpa:
