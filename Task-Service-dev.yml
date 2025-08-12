@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/taskservice?user=root
+    username: root
+    password: Prashant@1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  graphql:
+    websocket:
+      path: /graphql
+      enabled: true
+server:
+  port: 9030
+  servlet:
+    context-path: /tasks
